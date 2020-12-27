@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import ImageNotAvalable from '../../../assets/not_avalable.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component'; 
+import ImageNotAvalable from '../../../assets/not_available.png'; 
 import PropTypes from 'prop-types';
 
 const ImageContainer = ({ image, height, width }) => {

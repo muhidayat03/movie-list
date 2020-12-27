@@ -87,7 +87,7 @@ const NavbarBg = styled.div`
 `;
 
 Header.propTypes = {
-  handleSearch: PropTypes.function,
+  handleSearch: PropTypes.func,
 };
 
 export default Header;

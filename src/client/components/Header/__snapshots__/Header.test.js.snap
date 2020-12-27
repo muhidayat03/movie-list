@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CHeaderol> should render correctly  1`] = `
+<Fragment>
+  <styled.nav>
+    <styled.div>
+      <h1
+        style={
+          Object {
+            "color": "red",
+            "fontFamily": "Poppins",
+            "fontSize": 60,
+            "lineHeight": 1,
+            "margin": 0,
+          }
+        }
+      >
+        MOVIE LIST
+      </h1>
+    </styled.div>
+    <styled.div
+      fixed={false}
+    >
+      <styled.input
+        placeholder="Search ex: Batman"
+      />
+    </styled.div>
+  </styled.nav>
+  <styled.div
+    fixed={false}
+  />
+</Fragment>
+`;

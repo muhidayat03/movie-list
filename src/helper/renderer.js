@@ -7,7 +7,7 @@ import { renderRoutes } from 'react-router-config';
 import serialize from 'serialize-javascript';
 import { Helmet } from 'react-helmet';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import GlobalStyle from "./globalStyles";
+import GlobalStyle from "./globalStyles"; 
 
 const sheet = new ServerStyleSheet();
 

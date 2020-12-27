@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Col> should render correctly  1`] = `
+<div
+  className="sc-gsTCUz hCoice"
+/>
+`;
+
+exports[`<Row> should render correctly  1`] = `
+<div
+  className="sc-bdfBwQ bMGuAf"
+/>
+`;

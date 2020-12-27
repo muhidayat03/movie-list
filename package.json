@@ -11,7 +11,14 @@
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
-    "build:prod": "rm -rf build && rm -rf public && webpack  --config webpack.server.js && webpack  --config webpack.client.js --mode production"
+    "build:prod": "rm -rf build && rm -rf public && webpack  --config webpack.server.js && webpack  --config webpack.client.js --mode production",
+    "test": "jest --watch"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
   },
   "keywords": [],
   "author": "muhidayat03",
@@ -20,7 +27,6 @@
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
@@ -54,7 +60,18 @@
     "webpack-node-externals": "^2.5.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
     "eslint": "^7.16.0",
-    "eslint-plugin-react": "^7.21.5"
+    "eslint-plugin-react": "^7.21.5",
+    "jest": "^26.6.3",
+    "jest-enzyme": "^6.0.3"
   }
 }

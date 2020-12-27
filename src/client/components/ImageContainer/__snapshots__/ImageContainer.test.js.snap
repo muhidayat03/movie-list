@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageContainer> should render correctly  1`] = `
+<styled.div
+  isOpen={false}
+  onClick={[Function]}
+>
+  <styled.div
+    isOpen={false}
+  />
+  <t
+    afterLoad={[Function]}
+    beforeLoad={[Function]}
+    delayMethod="throttle"
+    delayTime={300}
+    effect=""
+    placeholderSrc={null}
+    threshold={100}
+    useIntersectionObserver={true}
+    visibleByDefault={false}
+    wrapperClassName=""
+  />
+</styled.div>
+`;
