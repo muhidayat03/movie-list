@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import ImageNotAvalable from '../../assets/not_avalable.png';
+import ImageNotAvalable from '../../../assets/not_avalable.png';
+import PropTypes from 'prop-types';
 
-
-
-
-export default ({ image, height, width }) => {
+const ImageContainer = ({ image, height, width }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-
   useEffect(() => {
     setTimeout(() => {
       if (isOpen) {
@@ -22,30 +18,25 @@ export default ({ image, height, width }) => {
       window.removeEventListener('click', close);
     };
   }, [isOpen]);
-
   const close = () => {
     setIsOpen(false)
   }
 
-
-
   return (
-    <ImageContainer isOpen={isOpen} width={width} height={height} onClick={() => setIsOpen(true)} >
+    <ImageContainerStyled isOpen={isOpen} width={width} height={height} onClick={() => setIsOpen(true)} >
       <ImagePlaceholder isOpen={isOpen} />
       <LazyLoadImage src={image == 'N/A' ? ImageNotAvalable : image} />
-    </ImageContainer>
+    </ImageContainerStyled>
   );
 }
 
-
-const ImageContainer = styled.div`  
+const ImageContainerStyled = styled.div`  
   height: ${({ height }) => height};
   width: ${({ width }) => width};  
   background-color: black;
   -webkit-box-shadow: 0px 0px 30px 8px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 30px 8px rgba(0,0,0,1);
   box-shadow: 0px 0px 30px 8px rgba(0,0,0,1);   
-
   img{
     width:  ${({ isOpen, width }) => isOpen ? '480px' : width};
     height: ${({ isOpen, height }) => isOpen ? '640px' : height}; 
@@ -60,7 +51,6 @@ const ImageContainer = styled.div`
     max-height: 90%; 
     transition: transform 0.3s, z-index 0s; 
   }
-  
 `;
 
 const ImagePlaceholder = styled.div`
@@ -75,4 +65,10 @@ const ImagePlaceholder = styled.div`
   display : ${({ isOpen }) => isOpen ? 'block' : 'none'}; 
 `;
 
+ImageContainer.propTypes = {
+  image: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string
+};
 
+export default ImageContainer;

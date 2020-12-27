@@ -15,7 +15,7 @@ app.get('*', (req, res) => {
     return route.loadData ? route.loadData(store, req.path) : null
   }).map(promise => {
     if (promise) {
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         promise.then(resolve).catch(resolve);
       });
     }
@@ -32,12 +32,9 @@ app.get('*', (req, res) => {
 
     res.send(content);
   });
-
-
-
-
 });
 
+// eslint-disable-next-line no-undef
 app.listen(process.env.PORT || 3000, () => {
   console.log('Listening on port 3000')
 });

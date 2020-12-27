@@ -6,42 +6,10 @@ import Routes from '../client/Routes';
 import { renderRoutes } from 'react-router-config';
 import serialize from 'serialize-javascript';
 import { Helmet } from 'react-helmet';
-import { ServerStyleSheet, StyleSheetManager, createGlobalStyle } from 'styled-components';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import GlobalStyle from "./globalStyles";
 
 const sheet = new ServerStyleSheet();
-const GlobalStyle = createGlobalStyle`
-body {
-  td{
-    border : 0;
-    padding : 4px 0px;
-    vertical-align: top;
-  }
-  h3{
-    color : white;
-    font-size: 18px;
-    font-weight : 600;
-    margin: 0;
-    margin-top: 10px;
-    font-family: Poppins, Helvetica, Sans-Serif; 
-    word-wrap: break-word;
-  }
-  *{
-    color : white;
-    box-sizing: border-box;
-    font-family: Poppins, Helvetica, Sans-Serif; 
-  }
-  margin: 0;
-  padding: 0;
-  p{
-    font-family: Poppins, Helvetica, Sans-Serif; 
-    color: white; 
-    margin: 0
-  }  
-  background: rgb(131,4,4);
-  background: linear-gradient(138deg, rgba(180,4,4,1) 0%, rgba(29,4,3,1) 30%, rgba(29,4,3,1) 70%, rgba(180,8,8,1) 100%);
-  background-attachment: fixed;
-}
-`;
 
 export default (req, store, context) => {
   try {
@@ -53,7 +21,6 @@ export default (req, store, context) => {
               <GlobalStyle />
               {renderRoutes(Routes)}
             </div>
-
           </StyleSheetManager>
         </StaticRouter >
       </Provider >

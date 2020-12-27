@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { listMovie, detailMovie } from './movieReducer';
+import { listMovie, detailMovie } from './reducers/movieReducer';
 
 
 export default combineReducers({
