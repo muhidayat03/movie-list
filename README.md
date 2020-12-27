@@ -8,7 +8,7 @@ clone this repo <br />
 Then, run:
 ```bash
 npm install
-npm start
+npm run dev
 ``` 
 
 ## Deploy
