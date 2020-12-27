@@ -12,13 +12,15 @@ npm start
 ``` 
 
 ## Deploy
+
 ```bash
 npm run build:prod
 ``` 
 
 
 ## Demo
-Demo can be accessed via [https://movie-web-ssr.herokuapp.com/](https://movie-web-ssr.herokuapp.com/)
+
+[https://movie-web-ssr.herokuapp.com/](https://movie-web-ssr.herokuapp.com/)
 
 ## Folder Structure
 
