@@ -15,7 +15,7 @@ const { apikey } = config;
 
 
 export const listMovie = (page = '', search = '') => async dispatch => {
-  let url = `http://www.omdbapi.com/?apikey=${apikey}&s=${search ? search : 'batman'}&page=${page}&type=movie`;
+  let url = `https://www.omdbapi.com/?apikey=${apikey}&s=${search ? search : 'batman'}&page=${page}&type=movie`;
   dispatch({
     type: LIST_MOVIE_LOADING,
   });
