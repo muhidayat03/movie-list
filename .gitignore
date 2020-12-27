@@ -82,7 +82,8 @@ typings/
 .idea/
 .vscode/
 node_modules/
-build
+build/
+public/
 bundle.js
 build/bundle.js
 .DS_Store

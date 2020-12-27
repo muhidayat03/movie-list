@@ -39,7 +39,7 @@ export const listMovie = (page = '', search = '') => async dispatch => {
 };
 
 export const detailMovie = (id = '') => async dispatch => {
-  let url = `http://www.omdbapi.com/?apikey=${apikey}&i=${id}&type=movie`;
+  let url = `https://www.omdbapi.com/?apikey=${apikey}&i=${id}&type=movie`;
   dispatch({
     type: DETAIL_MOVIE_LOADING,
   });
