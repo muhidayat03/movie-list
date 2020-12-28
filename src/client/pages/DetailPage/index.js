@@ -18,6 +18,7 @@ const UserListPage = (props) => {
   const dispatch = useDispatch();
   const { error, data, loading } = useSelector((state) => state.detailMovie);
   useEffect(() => {
+    window.scrollTo(0, 0);
     let id = props.match.params.id;
     dispatch(detailMovie(id));
   }, [])
