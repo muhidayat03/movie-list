@@ -2,6 +2,11 @@ This project base on with my simple-react-ssr boilerplate that I made from scrat
 repository : [https://github.com/muhidayat03/react-ssr-boilerplate](https://github.com/muhidayat03/react-ssr-boilerplate)
 
 
+## Logic Test Anagram
+```bash
+node anagram
+``` 
+
 ## How to run
 
 clone this repo <br />
@@ -36,6 +41,7 @@ npm run build:prod
             |--types
     |-- helper/
     |-- index.js   
+|-- anagram.js/
 |-- config/
 |-- webpack.base/
 |-- webpack.client/
